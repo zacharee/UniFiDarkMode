@@ -29,8 +29,7 @@
                 }
             </style>
 
-            <button class="btn"
-                    onclick="function() { window.navigate('https://cdn.jsdelivr.net/gh/zacharee/UniFiDarkMode@master/main.user.js') }">
+            <button class="btn">
                 <i class="fa fa-download"></i>
                 Install
             </button>
