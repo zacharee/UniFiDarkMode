@@ -1,1 +1,1 @@
-![](./installButton.svg)
+![](https://raw.githubusercontent.com/zacharee/UniFiDarkMode/master/installButton.svg)
