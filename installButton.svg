@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 500 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
     <g transform="matrix(1.08932,0,0,0.847458,-19.6078,-5.08475)">
         <path d="M477,65C477,32.437 456.433,6 431.1,6L63.9,6C38.567,6 18,32.437 18,65L18,183C18,215.563 38.567,242 63.9,242L431.1,242C456.433,242 477,215.563 477,183L477,65Z" style="fill:url(#_Linear1);"/>
     </g>
-    <g transform="matrix(1,0,0,1,-0.193252,-18.7143)">
+    <g transform="matrix(1,0,0,1,-3.19325,-18.7143)">
         <g transform="matrix(1,0,0,1,126,15.9474)">
             <g transform="matrix(125.644,0,0,125.644,354.221,147)">
             </g>
             <text x="26px" y="147px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:125.644px;fill:white;">Install</text>
         </g>
-        <g transform="matrix(7.14286,0,0,7.14286,-6.71429,36.5714)">
+        <g transform="matrix(6.42857,0,0,6.42857,2.85714,44.7857)">
             <path d="M5,20L19,20L19,18L5,18M19,9L15,9L15,3L9,3L9,9L5,9L12,16L19,9Z" style="fill:white;fill-rule:nonzero;"/>
         </g>
     </g>
