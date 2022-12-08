@@ -8,6 +8,7 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=ui.com
 // @grant        none
 // @require      https://cdnjs.cloudflare.com/ajax/libs/arrive/2.4.1/arrive.min.js
+// @updateURL    https://cdn.jsdelivr.net/gh/zacharee/UniFiDarkMode@master/main.user.js
 // ==/UserScript==
 
 const STYLESHEET_ID = 'unifi-dark-theme-style';
