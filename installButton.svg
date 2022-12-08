@@ -1,9 +1,16 @@
 <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
     <foreignObject width="100" height="100">
         <div>
-            <link rel="stylesheet"
-                  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             <style>
+                .fa {
+                display: inline-block;
+                font: normal normal normal 14px/1 FontAwesome;
+                font-size: inherit;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                }
+
                 .btn {
                 background-color: DodgerBlue;
                 border: none;
@@ -16,9 +23,17 @@
                 .btn:hover {
                 background-color: RoyalBlue;
                 }
+
+                .fa-download:before {
+                content: "\f019";
+                }
             </style>
 
-            <button class="btn" onclick="function() { window.navigate('https://cdn.jsdelivr.net/gh/zacharee/UniFiDarkMode@master/main.user.js') }"><i class="fa fa-download"></i> Install</button>
+            <button class="btn"
+                    onclick="function() { window.navigate('https://cdn.jsdelivr.net/gh/zacharee/UniFiDarkMode@master/main.user.js') }">
+                <i class="fa fa-download"></i>
+                Install
+            </button>
         </div>
     </foreignObject>
 </svg>
