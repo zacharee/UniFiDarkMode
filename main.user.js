@@ -120,9 +120,16 @@ function observeElements(lightToDark) {
         const elements = document.querySelectorAll(`[class*="${key}"]`);
         elements.forEach((_, index) => {
             const a = elements[index];
-            const classes = a.classList;
-            setTimeout(() => {
+            const classes = a.classList
+
+            function replace(a, classes, inverseKey) {
                 a.classList.value = classes.value.replace(new RegExp(key, "g"), inverseKey);
+            }
+
+            replace(a, classes, inverseKey);
+
+            setTimeout(() => {
+                replace(a, classes, inverseKey);
             }, 50);
         })
     }
