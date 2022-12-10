@@ -57,9 +57,12 @@ body {
 [class*="details"] {
     color: #fafafa !important;
 }
-main > div > div > div:nth-child(2) [class*="unifi-portal"] {
+main div div div:nth-child(2) [class*="unifi-portal"]:not(label) {
     background: #1f1f1f;
-    border-bottom: 1px solid #555555;
+    //border-bottom: 1px solid #555555;
+}
+main div div div:nth-child(2) [class*="unifi-portal"] label {
+    border-bottom: unset;
 }
 main > div > div:nth-child(1) [class*="unifi-portal"] {
     border-bottom: 1px solid #555555;
@@ -99,7 +102,7 @@ div [class*="options"] {
 [class*="tabsContainer"], div:has(> svg) {
     border: unset !important;
 }
-div[class*="unifi-portal"]:has(> a):hover, div.unifi-portal-1okx0t8 {
+div[class*="unifi-portal"]:has(> a):active, div.unifi-portal-1okx0t8 {
     background: #343434 !important;
 }
 button[class*="portal"][aria-expanded="true"] {
@@ -137,6 +140,15 @@ div[class*="groups__StyledSidePanel"] {
 }
 .dark-layout-content {
     background: #1a1a1a !important;
+}
+td div span {
+    color: #fff;
+}
+[class*="unifi-portal"] label .container {
+    background: #1a1a1a !important;
+}
+div[class*="unifi-portal"]:has(> span[class*="text-base"]) {
+    background: unset !important;
 }
 `;
 
