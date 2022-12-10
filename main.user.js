@@ -57,8 +57,8 @@ body {
 [class*="details"] {
     color: #fafafa !important;
 }
-main div div div:nth-child(2) [class*="unifi-portal"]:not(label) {
-    background: #1f1f1f;
+main div div div:nth-child(2) [class*="unifi-portal"]:not(label):not(a) {
+    background: #1a1a1a;
     //border-bottom: 1px solid #555555;
 }
 main div div div:nth-child(2) [class*="unifi-portal"] label {
@@ -77,7 +77,7 @@ main > div > div:nth-child(1) > * [class*="unifi-portal"] {
     border: 1px solid #555555 !important;
 }
 [class*="card"] {
-    background-color: #1f1f1f !important;
+    background-color: #1a1a1a !important;
 }
 span[class*="content"] > span, label {
     color: #fafafa !important;
@@ -86,17 +86,17 @@ span[class*="content"] > span, label {
     background-color: #343434;
 }
 div [class*="options"] {
-    background-color: #1f1f1f;
+    background-color: #1a1a1a;
     color: #fafafa;
 }
 .user-detail-panel, .user-detail-general-header, .user-detail-panel-tab {
-    background-color: #1f1f1f !important;
+    background-color: #1a1a1a !important;
 }
 .user-detail-panel-header h3, .user-detail-general-header h3 {
     color: #fff !important;
 }
 [class*="style_custom-date-picker-wrap"] {
-    background-color: #1f1f1f !important;
+    background-color: #1a1a1a !important;
     border: unset;
 }
 [class*="tabsContainer"], div:has(> svg) {
@@ -147,7 +147,7 @@ td div span {
 [class*="unifi-portal"] label .container {
     background: #1a1a1a !important;
 }
-div[class*="unifi-portal"]:has(> span[class*="text-base"]) {
+div[class*="unifi-portal"]:has(span[class*="text-base"]) {
     background: unset !important;
 }
 `;
