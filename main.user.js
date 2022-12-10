@@ -18,6 +18,11 @@ body {
 }
 :root, #root {
     --main-panel-background-color: #1a1a1a;
+    --side-panel-background-color: #1a1a1a;
+    --header-panel-background-color: #1a1a1a;
+    --footer-panel-background-color: #1a1a1a;
+    --header-panel-tertiary-background-color: #343434;
+    --navigation-background-color: #343434;
     background-color: #1a1a1a;
     color: #fff;
 }
@@ -94,6 +99,45 @@ div [class*="options"] {
 [class*="tabsContainer"], div:has(> svg) {
     border: unset !important;
 }
+div[class*="unifi-portal"]:has(> a):hover, div.unifi-portal-1okx0t8 {
+    background: #343434 !important;
+}
+button[class*="portal"][aria-expanded="true"] {
+    background-color: #343434 !important;
+}
+span[class*="content"] {
+    color: #fafafa;
+}
+[class*="input-light"] {
+    color: #fafafa;
+}
+[class*="input-focused"] {
+    color: #ffffff;
+}
+div[class*="filter-container"] {
+    background-color: #343434;
+}
+div.popover-dropdown-item:hover {
+    background: #343434 !important;
+}
+[class*="search_search-dropdown-icon"]:hover {
+    background: #343434 !important;
+}
+input {
+    background-color: #232323;
+}
+[class*="csv_csv-content"] label {
+    background: #343434 !important;
+}
+div[class*="groups__ListContainer"], div[class*="layout__ToolBar"] {
+    background: unset !important;
+}
+div[class*="groups__StyledSidePanel"] {
+    background: #121212;
+}
+.dark-layout-content {
+    background: #1a1a1a !important;
+}
 `;
 
 function themeStuff() {
@@ -117,20 +161,29 @@ function observeElements(lightToDark) {
     const inverseKey = (lightToDark) ? "dark" : "light";
 
     function onAdd() {
+        function replace(a, classes, inverseKey) {
+            a.classList.value = classes.value.replace(new RegExp(key, "g"), inverseKey);
+        }
+
+        if (this.classList) {
+            console.log(this.classList.value);
+            replace(this, this.classList, inverseKey);
+        }
+
         const elements = document.querySelectorAll(`[class*="${key}"]`);
         elements.forEach((_, index) => {
             const a = elements[index];
             const classes = a.classList
-
-            function replace(a, classes, inverseKey) {
-                a.classList.value = classes.value.replace(new RegExp(key, "g"), inverseKey);
-            }
 
             replace(a, classes, inverseKey);
 
             setTimeout(() => {
                 replace(a, classes, inverseKey);
             }, 50);
+
+            setTimeout(() => {
+                replace(a, classes, inverseKey);
+            }, 100);
         })
     }
 
