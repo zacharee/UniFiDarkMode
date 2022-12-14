@@ -79,7 +79,7 @@ main > div > div:nth-child(1) > * [class*="unifi-portal"] {
 [class*="card"] {
     background-color: #1a1a1a !important;
 }
-span[class*="content"] > span, label {
+span[class*="content"] span, label {
     color: #fafafa !important;
 }
 [class*="inputContainer-secondary"] {
@@ -107,9 +107,6 @@ div[class*="unifi-portal"]:has(> a):active, div.unifi-portal-1okx0t8 {
 }
 button[class*="portal"][aria-expanded="true"] {
     background-color: #343434 !important;
-}
-span[class*="content"] {
-    color: #fafafa;
 }
 [class*="input-light"] {
     color: #fafafa;
@@ -149,6 +146,9 @@ td div span {
 }
 div[class*="unifi-portal"]:has(span[class*="text-base"]) {
     background: unset !important;
+}
+button[class*="link-dark"] > span {
+    color: ##69aaff !important;
 }
 `;
 
