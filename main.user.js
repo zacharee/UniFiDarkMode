@@ -161,28 +161,28 @@ a > span[class*="content__"] {
 }
 `;
 
-function themeStuff() {
+async function themeStuff() {
     const styleSheet = document.createElement('style');
     styleSheet.id = STYLESHEET_ID;
     styleSheet.textContent = STYLESHEET;
     document.head.appendChild(styleSheet);
 
-    observeElements(true);
+    await observeElements(true);
 }
 
 async function removeTheme() {
     const styleSheetElement = document.getElementById(STYLESHEET_ID);
     styleSheetElement.remove();
 
-    observeElements(false);
+    await observeElements(false);
 }
 
-function observeElements(lightToDark) {
+async function observeElements(lightToDark) {
     const key = (lightToDark) ? "light" : "dark";
     const inverseKey = (lightToDark) ? "dark" : "light";
 
     async function onAdd() {
-        function replace(a, classes, inverseKey) {
+        async function replace(a, classes, inverseKey) {
             a.classList.value = classes.value.replace(new RegExp(key, "g"), inverseKey);
         }
 
@@ -191,8 +191,9 @@ function observeElements(lightToDark) {
         }
 
         const elements = document.querySelectorAll(`[class*="${key}"]`);
-        elements.forEach((_, index) => {
-            const a = elements[index];
+
+        for (let i = 0; i < elements.length; i++) {
+            const a = elements[i];
             const classes = a.classList
 
             replace(a, classes, inverseKey);
@@ -204,11 +205,11 @@ function observeElements(lightToDark) {
             setTimeout(() => {
                 replace(a, classes, inverseKey);
             }, 100);
-        })
+        }
     }
 
     if (lightToDark) {
-        onAdd();
+        await onAdd();
         document.arrive(`[class*="${key}"]`, {fireOnAttributesModification: true, existing: true}, onAdd);
     }
     document.unbindArrive(`[class*="${inverseKey}"]`);
