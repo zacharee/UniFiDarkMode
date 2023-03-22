@@ -26,7 +26,7 @@ body {
     background-color: #1a1a1a;
     color: #fff;
 }
-[class*="container-dark"], #console-dashboard-content, #section-header, main {
+[class*="container-dark"], #console-dashboard-content, #section-header, main, div[class*="style_header"], div[class*="style_add-content"], div[class*="style_add-role"] {
     background: #1a1a1a !important;
 }
 [class*="appHeader"] {
@@ -35,7 +35,7 @@ body {
 .dashboard-tile-image:hover {
     background: #343434 !important;
 }
-[class*="unifi-portal"][aria-current="true"] {
+[class*="unifi-portal"][aria-current="true"], div[class*="inputContainer"], li[class*="roles_role-option-selected"], li[class*="roles_role-option"]:hover {
     background: #343434 !important;
 }
 [class*="button-dark"]:hover {
@@ -102,7 +102,13 @@ div [class*="options"] {
 [class*="tabsContainer"], div:has(> svg) {
     border: unset !important;
 }
-div[class*="unifi-portal"]:has(> a):active, div.unifi-portal-1okx0t8 {
+div[class*="unifi-portal"] > a {
+    background: #1a1a1a !important;
+}
+div[class*="unifi-portal"] > a[aria-selected="true"], div[class*="unifi-portal"] > a:hover {
+    background: #343434 !important;
+}
+div[class*="unifi-portal"]:has(> a):active, div.unifi-portal-1okx0t8, div.unifi-portal-6p32f5 {
     background: #343434 !important;
 }
 button[class*="portal"][aria-expanded="true"] {
@@ -148,7 +154,10 @@ div[class*="unifi-portal"]:has(span[class*="text-base"]) {
     background: unset !important;
 }
 button[class*="link-dark"] > span {
-    color: ##69aaff !important;
+    color: #69aaff !important;
+}
+a > span[class*="content__"] {
+    color: #69aaff !important;
 }
 `;
 
