@@ -170,7 +170,7 @@ function themeStuff() {
     observeElements(true);
 }
 
-function removeTheme() {
+async function removeTheme() {
     const styleSheetElement = document.getElementById(STYLESHEET_ID);
     styleSheetElement.remove();
 
@@ -181,13 +181,12 @@ function observeElements(lightToDark) {
     const key = (lightToDark) ? "light" : "dark";
     const inverseKey = (lightToDark) ? "dark" : "light";
 
-    function onAdd() {
+    async function onAdd() {
         function replace(a, classes, inverseKey) {
             a.classList.value = classes.value.replace(new RegExp(key, "g"), inverseKey);
         }
 
         if (this.classList) {
-            console.log(this.classList.value);
             replace(this, this.classList, inverseKey);
         }
 
