@@ -25,8 +25,9 @@ body {
     --navigation-background-color: #343434;
     background-color: #1a1a1a;
     color: #fff;
+    black-65: #adadad;
 }
-[class*="container-dark"], #console-dashboard-content, #section-header, main, div[class*="style_header"], div[class*="style_add-content"], div[class*="style_add-role"] {
+[class*="container-dark"], #console-dashboard-content, #section-header, main, div[class*="style_header"], div[class*="style_add-content"], div[class*="style_add-role"], .ant-layout, .c-layout-content, .c-content {
     background: #1a1a1a !important;
 }
 [class*="appHeader"] {
@@ -158,6 +159,30 @@ button[class*="link-dark"] > span {
 }
 a > span[class*="content__"] {
     color: #69aaff !important;
+}
+.setup-tips, .empty-tip {
+    color: #fafafa !important;
+}
+.setup-tiele, h2 {
+    color: #ffffff !important;
+}
+.text-color-1, .text-color-0 {
+    color: #ffffff !important;
+}
+.text-color-2 {
+    color: #dadada !important;
+}
+.text-color-3 {
+    color: #ababab !important;
+}
+.c-sider {
+    background-color: #232326 !important;
+}
+table {
+    background: #1a1a1a !important;
+}
+div.text-color-2:has(> svg) {
+    background: #343434 !important;
 }
 `;
 
