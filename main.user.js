@@ -184,6 +184,12 @@ table {
 div.text-color-2:has(> svg) {
     background: #343434 !important;
 }
+header {
+    background: unset !important;
+}
+[aria-current="page"] {
+    background-color: #343434 !important;
+}
 `;
 
 async function themeStuff() {
