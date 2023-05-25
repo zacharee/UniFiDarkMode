@@ -58,19 +58,19 @@ body {
 [class*="details"] {
     color: #fafafa !important;
 }
-main div div div:nth-child(2) [class*="unifi-portal"]:not(label):not(a) {
+main > div > div > div:nth-child(2) > [class*="unifi-portal"]:not(label):not(a) {
     background: #1a1a1a;
     //border-bottom: 1px solid #555555;
 }
-main div div div:nth-child(2) [class*="unifi-portal"] label {
-    border-bottom: unset;
-}
-main > div > div:nth-child(1) [class*="unifi-portal"] {
+//main > div > div > div:nth-child(2) > [class*="unifi-portal"] > label {
+//    border-bottom: unset;
+//}
+main > div > div:nth-child(1) > [class*="unifi-portal"] {
     border-bottom: 1px solid #555555;
 }
-main > div > div:nth-child(1) > * [class*="unifi-portal"] {
-    border-bottom: unset;
-}
+//main > div > div:nth-child(1) > * [class*="unifi-portal"] {
+//    border-bottom: unset;
+//}
 [class*="icon"] {
     color: #787878;
 }
@@ -80,9 +80,9 @@ main > div > div:nth-child(1) > * [class*="unifi-portal"] {
 [class*="card"] {
     background-color: #1a1a1a !important;
 }
-span[class*="content"] span, label {
-    color: #fafafa !important;
-}
+//span[class*="content"] span, label {
+//    color: #fafafa !important;
+//}
 [class*="inputContainer-secondary"] {
     background-color: #343434;
 }
@@ -189,6 +189,30 @@ header {
 }
 [aria-current="page"] {
     background-color: #343434 !important;
+}
+button span span[class=*="unifi-portal"] {
+    color: #1a1a1a !important;
+}
+#console-group-toolbar > div:nth-child(2), #console-group-toolbar > div:nth-child(3) {
+    background: #1a1a1a !important;
+}
+.unifi-portal-10nx036 {
+    color: rgb(0, 111, 255) !important;
+}
+div[class*="style_name"] {
+    color: unset !important;
+}
+div[class*="style_scroll-content"] > div[class*="style_edit-content"] {
+    background-color: #212121 !important;
+}
+div[class*="style_scroll-content"] > div[class*="style_manage"] {
+    background-color: #212121 !important;
+}
+div[class*="style_you-icon"] > span {
+    color: #1a1a1a !important;
+}
+div[class*="style_role-select-tip"] {
+    background: #232323 !important;
 }
 `;
 
